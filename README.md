@@ -9,10 +9,9 @@ sudo apt-get install g++ <br>
 sudo apt-get install git <br>
 
 grab buildroot 2015.11 <br>
-make raspberrypi2_defconfig <br>
-make menuconfig <br>
-enable compiler cache <br>
-build initramfs <br>
-don't tar system <br>
-python3 <br>
-libzeromq <br>
+make rPod_defconfig <br>
+make<br>
+follow instructions in the raspberry pi board readme to flash the zImage to an sd card <br>
+the postgresql library is slowing down the boot right now. We need to<br>
+figure out how to get it to do it's initial setup only once or before<br>
+the image is made.

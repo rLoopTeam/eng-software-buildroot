@@ -1,0 +1,4 @@
+config BR2_PACKAGE_RPI_GPIO
+        bool "python GPIO library"
+        help
+          The python library for accessing the Pi's gpio
