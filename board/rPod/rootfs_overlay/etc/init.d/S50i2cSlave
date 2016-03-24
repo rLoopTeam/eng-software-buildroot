@@ -1,1 +1,1 @@
-modprobe i2c-slave
+modprobe bsc-slave
