@@ -1,1 +1,0 @@
-include package/rPod/*/*.mk
