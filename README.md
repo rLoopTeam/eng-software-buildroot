@@ -15,3 +15,6 @@ follow instructions in the raspberry pi board readme to flash the zImage to an s
 the postgresql library is slowing down the boot right now. We need to<br>
 figure out how to get it to do it's initial setup only once or before<br>
 the image is made.
+
+samba and ssh are now working. The pi will have an ip assigned by DHCP and its
+hostname is rPodPi.
