@@ -19,16 +19,16 @@ the image is made.
 samba and ssh are now working. The pi will have an ip assigned by DHCP and its
 hostname is rPodPi.
 
-Included Packages:
-I2C Slave Kernel Extension
-python
-cifs-utils
-teensy CLI loader
-rpi gpio library
-zeromq
-dropbear (ssh server)
-cpuload
-supervisor
-nano
-uemacs
-postgresql
+Included Packages: <br>
+I2C Slave Kernel Extension <br>
+python <br>
+cifs-utils <br>
+teensy CLI loader <br>
+rpi gpio library <br>
+zeromq <br>
+dropbear (ssh server) <br>
+cpuload <br>
+supervisor <br>
+nano <br>
+uemacs <br>
+postgresql <br>
