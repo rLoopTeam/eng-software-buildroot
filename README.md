@@ -32,3 +32,5 @@ supervisor <br>
 nano <br>
 uemacs <br>
 postgresql <br>
+samba <br>
+nfs<br>
