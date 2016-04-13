@@ -4,6 +4,7 @@ This will contain the files necessary to assemble a buildroot image for the rPod
 
 Brief notes:
 from a ubuntu clean install: <br>
+sudo apt-get update <br>
 sudo apt-get install ncurses-dev <br>
 sudo apt-get install g++ <br>
 sudo apt-get install git <br>
