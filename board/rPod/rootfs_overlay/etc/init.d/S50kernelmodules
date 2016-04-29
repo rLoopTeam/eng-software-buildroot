@@ -1,8 +1,0 @@
-modprobe bsc-slave
-modprobe rt2800usb
-modprobe rt2800lib
-modprobe rt2x00usb
-modprobe rt2x00lib
-modprobe mac80211
-modprobe cfg80211
-modprobe crc_ccitt
