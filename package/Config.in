@@ -3,6 +3,7 @@ menu "rPod"
 	source "package/rPod/pythonScripts/Config.in"
 	source "package/rPod/rpi-gpio/Config.in"
 	source "package/rPod/teensy-loader-cli/Config.in"
+	source "package/rPod/bsc-slave-tools/Config.in"
 endmenu
 
 menu "Target packages"

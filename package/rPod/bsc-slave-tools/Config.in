@@ -1,0 +1,5 @@
+config BR2_PACKAGE_BSC_SLAVE_TOOLS
+        bool "i2c slave tools"
+	depends on BR2_PACKAGE_BSC_SLAVE
+        help
+          Some tools for the bsc-slave kernel module specific to rPod.
