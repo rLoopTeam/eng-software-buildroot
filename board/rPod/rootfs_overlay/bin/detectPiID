@@ -1,0 +1,3 @@
+#!/bin/ash
+echo `/usr/bin/python /bin/detectPiID.py`
+
