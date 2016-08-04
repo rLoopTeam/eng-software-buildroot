@@ -8,6 +8,8 @@ if ! mount | grep -q "mmcblk0p2" ; then
  mount /dev/mmcblk0p1
  mount /dev/mmcblk0p2
  cp /etc/wpa_supplicant_sample.conf /mnt/data/wpa_supplicant.conf
+ mkdir /mnt/data/config
+ echo "New Node" > /mnt/data/config/nodename
  mkdir /mnt/data/pgsql
  chown postgres /mnt/data/pgsql
 fi

@@ -1,0 +1,3 @@
+#!/bin/ash
+
+/usr/bin/python /bin/telemetry.py

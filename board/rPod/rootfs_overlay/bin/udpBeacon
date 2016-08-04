@@ -1,0 +1,5 @@
+#!/bin/ash
+
+/usr/bin/python /bin/udpBeacon.py
+
+
