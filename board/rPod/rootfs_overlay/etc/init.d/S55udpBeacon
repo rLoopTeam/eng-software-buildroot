@@ -17,14 +17,12 @@ PIDFILE=/var/run/$DAEMON_NAME.pid
 
 
 do_start () {
-    printf "Starting system $DAEMON_NAME daemon"
+    printf "Starting system $DAEMON_NAME daemon\n"
     start-stop-daemon --start --background --pidfile $PIDFILE --make-pidfile --user $DAEMON_USER --chuid $DAEMON_USER --startas $DAEMON -- $DAEMON_OPTS
-    printf $?
 }
 do_stop () {
-    printf "Stopping system $DAEMON_NAME daemon"
+    printf "Stopping system $DAEMON_NAME daemon\n"
     start-stop-daemon --stop --pidfile $PIDFILE --retry 10
-    printf $?
 }
 
 case "$1" in
