@@ -1,1 +1,0 @@
-teensy_loader_cli --mcu=mk20dx256 -s $1

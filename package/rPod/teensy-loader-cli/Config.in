@@ -1,4 +1,0 @@
-config BR2_PACKAGE_TEENSY_LOADER_CLI
-        bool "Teensy CLI Loader"
-        help
-          Downloads code to the Teensy uC.

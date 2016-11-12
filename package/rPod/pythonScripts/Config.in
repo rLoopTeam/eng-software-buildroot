@@ -1,4 +1,0 @@
-config BR2_PACKAGE_PYTHONSCRIPTS
-        bool "python scripts"
-        help
-          All the scripts we've written for the rPod

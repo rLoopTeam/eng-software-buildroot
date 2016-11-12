@@ -1,5 +1,0 @@
-config BR2_PACKAGE_BSC_SLAVE
-        bool "i2c slave"
-	depends on BR2_LINUX_KERNEL
-        help
-          Hardware I2C slave support for the pi.

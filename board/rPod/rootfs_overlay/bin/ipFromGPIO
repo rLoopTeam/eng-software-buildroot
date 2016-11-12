@@ -9,7 +9,7 @@ if [ $nodeID -eq 0 ]
 then
         echo "Using DHCP"
         `ifconfig eth0 0.0.0.0 0.0.0.0`
-        `udhcpc`
+        `udhcpc -b`
 else
         echo "Setting IP to "$ip
         `$command`
