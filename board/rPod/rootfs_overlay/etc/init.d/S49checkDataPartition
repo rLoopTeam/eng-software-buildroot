@@ -10,6 +10,8 @@ if ! mount | grep -q "mmcblk0p2" ; then
  cp /etc/wpa_supplicant_sample.conf /mnt/data/wpa_supplicant.conf
  mkdir /mnt/data/config
  echo -e "New\n" > /mnt/data/config/nodename
+ echo -e "57600\n" > /mnt/data/config/serialbaud
  mkdir /mnt/data/pgsql
  chown postgres /mnt/data/pgsql
+ mkdir /mnt/data/log
 fi

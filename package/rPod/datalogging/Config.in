@@ -1,0 +1,4 @@
+config BR2_PACKAGE_DATALOGGING
+        bool "rPod Datalogging"
+        help
+          The datalogging code for rPod

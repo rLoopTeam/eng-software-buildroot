@@ -1,6 +1,7 @@
 menu "rPod"
-	source "package/rPod/bsc-slave/Config.in"
 	source "package/rPod/rpi-gpio/Config.in"
+	source "package/rPod/bsc-slave-tools/Config.in"
+	source "package/rPod/datalogging/Config.in"
 endmenu
 
 menu "Target packages"

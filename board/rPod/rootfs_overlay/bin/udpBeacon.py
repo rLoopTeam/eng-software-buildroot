@@ -1,9 +1,9 @@
-import time, threading, socket, os
+import time, threading, socket, os, datetime
 import RPi.GPIO as GPIO
 
 UDP_IP = "239.3.14.159"
 UDP_PORT = 50051
-PREAMBLE = "rPod!"
+PREAMBLE = "rPod!,"
 NODE = "New Node"
 
 #Get the Pi's ID
@@ -21,21 +21,39 @@ if os.path.isfile('/mnt/data/config/nodename'):
 	f = open('/mnt/data/config/nodename', 'r')
 	NODE = f.readline()
 	NODE = NODE.strip()
+	f.close()
 
-MESSAGE = PREAMBLE+chr(PiID)+NODE
+
+MESSAGE = PREAMBLE+str(PiID)+","+NODE
 
 print "UDP target IP:", UDP_IP
 print "UDP target port:", UDP_PORT
 print "message:", MESSAGE
 
 def udpAnnounce():
-	try:
+#	try:
+		isLogging = "no"
+		if os.path.isfile('/var/run/datalogd.pid'):
+			f = open('/var/run/datalogd.pid')
+			PID = f.readline()
+			PID = PID.strip()
+			f.close()
+			try:
+				os.kill(int(PID),0)
+			except OSError:
+				isLogging = "no"
+			else:
+				isLogging="yes"
+			
+		MESSAGE2 = MESSAGE+","+str(datetime.datetime.now())+","+isLogging
 		sock = socket.socket(socket.AF_INET, # Internet
 			socket.SOCK_DGRAM) # UDP
+		sock.setsockopt(socket.SOL_SOCKET, 25, "eth0")		
 		sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-		sock.sendto(MESSAGE, (UDP_IP, UDP_PORT))
-	except:
-		pass
-	threading.Timer(2, udpAnnounce).start()
+		sock.sendto(MESSAGE2, (UDP_IP, UDP_PORT))
+#	except:
+#		pass
+		threading.Timer(2, udpAnnounce).start()
 
 udpAnnounce()
+
